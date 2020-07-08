@@ -76,6 +76,10 @@ let s:IN3 = [ s:gui02 , s:gui00 , s:cterm02 , s:cterm00 ]
 let g:airline#themes#jellybeans#palette.inactive = airline#themes#generate_color_map(s:IN1, s:IN2, s:IN3)
 let g:airline#themes#jellybeans#palette.inactive_modified = s:modified
 
+let g:airline#themes#jellybeans#palette.tabline = {
+            \ 'airline_tabfill':  ['#767676', 'none',    243, 255, ''],
+            \ }
+
 " CtrlP
 if !get(g:, 'loaded_ctrlp', 0)
   finish
@@ -86,3 +90,15 @@ let s:CP2 = [ s:guiWhite , s:gui03 , s:ctermWhite , s:cterm01  ]
 let s:CP3 = [ s:guiWhite , s:gui0D , s:ctermWhite , s:cterm0D  ]
 
 let g:airline#themes#jellybeans#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(s:CP1, s:CP2, s:CP3)
+
+"all the configurables
+let g:airline#themes#jellybeans#palette.tabline = {
+            \ 'airline_tab':      ['#4f5b66', 'none',    255, 54 , ''],
+            \ 'airline_tablabel': ['#d8dee9', '#151515', 255, 54 , ''],
+            \ 'airline_tabsel':   ['#0d61ac', 'none',    255, 97 , 'underline'],
+            \ 'airline_tabtype':  ['#ffffff', '#00af00', 255, 34 , ''],
+            \ 'airline_tabfill':  ['#767676', 'none',    243, 255, ''],
+            \ 'airline_tabhid':   ['#4f5b66', 'none', 243, 255, ''],
+            \ 'airline_tabmodu':  ['#767676', '#ffffff', 243, 255, ''],
+            \ 'airline_tabmod':   ['fg', 'none', 255, 243, 'underline']
+            \ }
